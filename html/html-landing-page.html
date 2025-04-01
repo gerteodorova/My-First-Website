@@ -5,7 +5,16 @@
     <title>HTML</title>
     <link rel="stylesheet" href="../styles.css">
     <script>
-    function loadLesson(lessonFile) {
+      let currentLesson = ""; // Stores the currently open lesson
+
+function loadLesson(lessonFile) {
+    let contentDiv = document.getElementById("lesson-content");
+
+    // If the same lesson is clicked again, close it
+    if (currentLesson === lessonFile) {
+        contentDiv.innerHTML = "<p>Click a lesson to load its content here.</p>";
+        currentLesson = ""; // Reset current lesson
+    } else {
         fetch(lessonFile)
             .then(response => {
                 if (!response.ok) {
@@ -14,29 +23,33 @@
                 return response.text();
             })
             .then(data => {
-                document.getElementById("lesson-content").innerHTML = data;
+                contentDiv.innerHTML = data;
+                currentLesson = lessonFile; // Update current lesson
             })
             .catch(error => {
-                document.getElementById("lesson-content").innerHTML = "<p style='color:red;'>Error loading lesson. Make sure the file exists.</p>";
+                contentDiv.innerHTML = "<p style='color:red;'>Error loading lesson. Make sure the file exists.</p>";
                 console.error(error);
             });
     }
+}
 </script>
 
 </head>
 <body>
-    <header>
-        <h1>HTML basics</h1>
-        <nav>
+    
+    <h1>HTML basics</h1>
+    
+    <div class="container">
+        <nav class="sidebar>
             <a href="index.html">Home</a> 
             <!-- <a href="lesson 1 - html.html">Lesson 1 - HTML Basics</a> -->
             <a href="lesson 2 - attributes.html">Lesson 2 - Attributes</a> 
-            <a href="lesson 3 - link-element.html">Lesson 3 - Link Element</a>
-            <a href="#" onclick="loadLesson('lesson 1 - html.html')">Lesson 1 - HTML Basics</a> 
+            <!--<a href="lesson 3 - link-element.html">Lesson 3 - Link Element</a> -->
+            <a href="#" onclick="loadLesson('lesson1-html.html')">Lesson 1 - HTML Basics</a> 
             <a href="#" onclick="loadLesson('lesson2.html')">Lesson 2 - Attributes</a> 
             <a href="#" onclick="loadLesson('lesson3.html')">Lesson 3 - Link Element</a>
         </nav>
-    </header>
+    </div>
     <main>
         <main id="lesson-content">
             <p>Click a lesson to load its content here.</p>
