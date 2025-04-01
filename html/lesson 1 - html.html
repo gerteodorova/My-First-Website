@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Learning Documentation</title>
 </head>
+
 <body>
     <div>
         <h1>HTML on the Web</h1>
-        
+
         <h2>Lesson 1 - What is HTML?</h2>
         <h3>Definition</h3>
         <ul>
@@ -24,7 +26,8 @@
             <li>Opening and closing tags:
                 <ul>
                     <li><strong>Opening tag:</strong> <code>&lt;p&gt;</code></li>
-                    <li><strong>Closing tag:</strong> <code>&lt;/p&gt;</code> (contains a forward slash <code>/</code>)</li>
+                    <li><strong>Closing tag:</strong> <code>&lt;/p&gt;</code> (contains a forward slash <code>/</code>)
+                    </li>
                 </ul>
             </li>
             <li><strong>Void elements</strong> (do not require a closing tag)
@@ -64,10 +67,13 @@
 
         <h3>Common HTML Attributes</h3>
         <ul>
-            <li><strong>href</strong> → Specifies the URL of a link <br> Example: <code>&lt;a href="https://www.example.com"&gt;Visit&lt;/a&gt;</code></li>
-            <li><strong>src</strong> → Specifies the source of an image <br> Example: <code>&lt;img src="image.jpg" alt="A beautiful image" /&gt;</code></li>
+            <li><strong>href</strong> → Specifies the URL of a link <br> Example:
+                <code>&lt;a href="https://www.example.com"&gt;Visit&lt;/a&gt;</code></li>
+            <li><strong>src</strong> → Specifies the source of an image <br> Example:
+                <code>&lt;img src="image.jpg" alt="A beautiful image" /&gt;</code></li>
             <li><strong>alt</strong> → Provides descriptive text for images (important for accessibility).</li>
-            <li><strong>checked</strong> → Boolean attribute used in checkboxes to mark them as checked by default. <br> Example: <code>&lt;input type="checkbox" checked /&gt;</code></li>
+            <li><strong>checked</strong> → Boolean attribute used in checkboxes to mark them as checked by default. <br>
+                Example: <code>&lt;input type="checkbox" checked /&gt;</code></li>
             <li>Other common boolean attributes: <strong>disabled, readonly, required</strong></li>
         </ul>
 
@@ -76,16 +82,18 @@
             <li>Help make web content more <strong>interactive</strong> and <strong>accessible</strong>.</li>
             <li>Allow customization of elements to suit different functionalities.</li>
         </ul>
-        
+
         <div>
             <h2>Lesson 3 - Using the Link Element</h1>
-            <ul>
-                <li>The <code>&lt;link&gt;</code> element is used to link external resources like stylesheets and icons.</li>
-                <li>Basic syntax: <code>&lt;link rel="stylesheet" href="./styles.css" /&gt;</code></li>
-                <li><strong>rel</strong>: Specifies the relationship between the document and the linked resource.</li>
-                <li><strong>href</strong>: Specifies the URL of the external resource.</li>
-                <li>Example usage inside the <code>&lt;head&gt;</code> section:
-                    <pre>
+                <ul>
+                    <li>The <code>&lt;link&gt;</code> element is used to link external resources like stylesheets and
+                        icons.</li>
+                    <li>Basic syntax: <code>&lt;link rel="stylesheet" href="./styles.css" /&gt;</code></li>
+                    <li><strong>rel</strong>: Specifies the relationship between the document and the linked resource.
+                    </li>
+                    <li><strong>href</strong>: Specifies the URL of the external resource.</li>
+                    <li>Example usage inside the <code>&lt;head&gt;</code> section:
+                        <pre>
     &lt;head&gt;
       &lt;meta charset="UTF-8" /&gt;
       &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
@@ -93,20 +101,20 @@
       &lt;link rel="stylesheet" href="./styles.css" /&gt;
     &lt;/head&gt;
                     </pre>
-                </li>
-                <li>Can also be used to link Google Fonts:
-                    <pre>
+                    </li>
+                    <li>Can also be used to link Google Fonts:
+                        <pre>
     &lt;link rel="preconnect" href="https://fonts.googleapis.com" /&gt;
     &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /&gt;
     &lt;link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet" /&gt;
                     </pre>
-                </li>
-                <li>Used to add a <strong>favicon</strong> (site icon): <br>
-                    <code>&lt;link rel="icon" href="favicon.ico" /&gt;</code>
-                </li>
-            </ul>
+                    </li>
+                    <li>Used to add a <strong>favicon</strong> (site icon): <br>
+                        <code>&lt;link rel="icon" href="favicon.ico" /&gt;</code>
+                    </li>
+                </ul>
         </div>
-        <p><a href="index.html">Back to Home</a></p>
+        <p><a href="../index.html">Back to Home</a></p>
     </div>
 </body>
 </html>
