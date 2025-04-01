@@ -1,0 +1,92 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: rgb(215, 215, 215);
+}
+
+/* Header styling */
+header {
+    background: #000000;
+    color: rgb(206, 206, 206);
+    padding: 15px;
+    text-align: center;
+    
+}
+
+/* Navigation bar */
+nav {
+    list-style-type: none; /* Removes bullet points from the list */
+    padding: 20px;
+    margin: 20px;
+    display: flex; /* Display list items in a row */
+    justify-content: center; /* Centers the navigation links */
+}
+
+
+/* List styling */
+nav ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* List items */
+nav ul li {
+    margin: 100px; /* Space between the links */
+}
+
+/* Links styling */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    /* Makes the link take up the full width of the list item */
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+/* Main content */
+main {
+    text-align: center; /* Makes room for the sidebar */
+    padding: 20px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #000000;
+    color: rgb(216, 216, 216);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* Default link color */
+a {
+    color: rgb(255, 255, 255); /* Change this to any color you want */
+    text-decoration: none; /* Removes underline */
+}
+
+/* Hover effect */
+a:hover {
+    color: rgb(126, 221, 136); /* Changes color when you hover */
+    text-decoration: underline; /* Adds underline when hovered */
+}
+
+/* Visited link color */
+a:visited {
+    color: purple;
+}
+
+/* Active link color (when clicked) */
+a:active {
+    color: green;
+}
